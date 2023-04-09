@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  reactive-rabbitmq:
+    container_name: reactive-rabbitmq
+    image: rabbitmq:management
+    restart: unless-stopped
+    ports:
+      - "5673:5673"
+      - "15673:15673"
+    networks:
+      - reactive-rabbitmq-net
+
+networks:
+    reactive-rabbitmq-net:
+      driver: bridge
