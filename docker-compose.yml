@@ -6,8 +6,8 @@ services:
     image: rabbitmq:management
     restart: unless-stopped
     ports:
-      - "5673:5673"
-      - "15673:15673"
+      - "5673:5672"
+      - "15673:15672"
     networks:
       - reactive-rabbitmq-net
 
